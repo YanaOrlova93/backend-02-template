@@ -1,17 +1,3 @@
-const express = require('express');
-const app = express();
-const port = 3000;
-
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
-
-app.listen(port, async () => {
-  console.log(`Server running at http://localhost:3001`);
-  const open = await import('open');
-  open.default(`http://localhost:3001`);
-});
-
 const http = require("http");
 const getUsers = require("./modules/users");
 
@@ -54,7 +40,7 @@ const server = http.createServer((request, response) => {
 });
 
 server.listen(3000, () => {
-  console.log("Сервер запущен по адресу http:/127.0.0.1:3001");
+  console.log("Сервер запущен по адресу http:/127.0.0.1:3000");
 });
 
 
